@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tipos_reporte">
+        <item>ALUMBRADO PÚBLICO</item>
+        <item>ANIMALES CALLEJEROS O EN SITUACIÓN DE ABANDONO</item>
+        <item>BACHES</item>
+        <item>BASURA O ESCOMBRO</item>
+        <item>FUMIGACIÓN O PLAGAS</item>
+        <item>FUGAS O DRENAJE</item>
+        <item>OTRO ASUNTO</item>
+    </string-array>
+
+    <string-array name="colonias">
+        <item>100 CASAS</item>
+        <item>13 DE JULIO</item>
+        <item>18 DE NOVIEMBRE</item>
+        <item>22 DE NOVIEMBRE</item>
+        <item>23 DE MARZO</item>
+        <item>23 DE NOVIEMBRE</item>
+        <item>29 DE NOVIEMBRE</item>
+        <item>5 DE MAYO</item>
+        <item>ACACIAS</item>
+        <item>ADOLFO DE LA HUERTA</item>
+        <item>ADOLFO LÓPEZ MATEOS</item>
+        <item>AEROCOMANDER</item>
+        <item>AEROPUERTO</item>
+        <item>ALAMO</item>
+        <item>AMÉRICAS</item>
+        <item>AMPLIACIÓN BURÓCRATA</item>
+        <item>AMPLIACIÓN GIL SAMANIEGO</item>
+        <item>AMPLIACIÓN GOLFO DE CALIFORNIA</item>
+        <item>AMPLIACIÓN GUADALUPE</item>
+        <item>AMPLIACIÓN INDEPENDENCIA</item>
+        <item>AMPLIACIÓN MIGUEL HIDALGO</item>
+        <item>ANTENA</item>
+        <item>ANTORCHISTA</item>
+        <item>ARANJUÉZ</item>
+        <item>ARCOS</item>
+        <item>ARRECIFES</item>
+        <item>ATARDECERES</item>
+        <item>AURORA</item>
+        <item>BÁCUM</item>
+        <item>BAHÍA</item>
+        <item>BAUGO</item>
+        <item>BAUTECAS</item>
+        <item>BELEM</item>
+        <item>BELLAVISTA</item>
+        <item>BICENTENARIO</item>
+        <item>BRISAS</item>
+        <item>BUENOS AIRES</item>
+        <item>BUGAMBILIA</item>
+        <item>BURÓCRATA</item>
+        <item>CALICHI</item>
+        <item>CAMPESTRE</item>
+        <item>CAMPO DE TIRO</item>
+        <item>CAMPO NUEVO</item>
+        <item>CANTERA</item>
+        <item>CARACÓL PENINSULA</item>
+        <item>CARACÓL TURÍSTICO</item>
+        <item>CARLOS ROMERO D</item>
+        <item>CASAS BLANCAS</item>
+        <item>CASTILLO</item>
+        <item>CENTENARIO</item>
+        <item>CENTINELA</item>
+        <item>CENTRO</item>
+        <item>CERRO GANDAREÑO</item>
+        <item>CHOYA</item>
+        <item>CHUMAMPACO</item>
+        <item>COLINAS</item>
+        <item>COLINAS DE MIRAMAR</item>
+        <item>COLINAS DEL SOL</item>
+        <item>COLONIA CENTRO</item>
+        <item>COSTA AZUL</item>
+        <item>COUNTRY CLUB</item>
+        <item>CRESTÓN</item>
+        <item>CUADRITA</item>
+        <item>DELICIAS</item>
+        <item>DIAMANTE</item>
+        <item>DORADO</item>
+        <item>EMILIANO ZAPATA</item>
+        <item>EMPALME</item>
+        <item>ESTEBAN BACA CALDERÓN</item>
+        <item>FÁTIMA</item>
+        <item>FEMOSA</item>
+        <item>FLORES</item>
+        <item>FOVISSSTE</item>
+        <item>FRANCISCO MÁRQUEZ</item>
+        <item>FUENTE DE PIEDRA</item>
+        <item>FUENTES</item>
+        <item>FUENTES RODRÍGUEZ</item>
+        <item>GIL SAMANIEGO</item>
+        <item>GIL SAMANIEGO 2</item>
+        <item>GOLFO DE CALIFORNIA</item>
+        <item>GOLONDRINAS</item>
+        <item>GUADALUPE</item>
+        <item>GUADALUPE VICTORIA</item>
+        <item>GUARIDA DEL TIGRE</item>
+        <item>GUASIMAS</item>
+        <item>GUAYMAS CENTRO</item>
+        <item>GUAYMAS NORTE</item>
+        <item>HUIRIBIS</item>
+        <item>HUIRIVIS</item>
+        <item>HUMBERTO GUTIÉRREZ</item>
+        <item>INDEPENDENCIA</item>
+        <item>INFONAVIT</item>
+        <item>JACINTO LÓPEZ</item>
+        <item>JARDÍNES</item>
+        <item>JUAN FRANCISCO PATRÓN MÁRQUEZ</item>
+    </string-array>
+
+</resources>
