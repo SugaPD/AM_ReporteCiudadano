@@ -13,7 +13,7 @@ import android.net.Uri;
 import android.widget.Button;
 
 public class ContactoActivity extends AppCompatActivity {
-    Button btnMapa, btnCorreo, btnLlamar;
+    Button btnMapa, btnCorreo, btnLlamar, btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class ContactoActivity extends AppCompatActivity {
         btnMapa = findViewById(R.id.btnMapa);
         btnCorreo = findViewById(R.id.btnCorreo);
         btnLlamar = findViewById(R.id.btnLlamar);
+        btnVolver = findViewById(R.id.btnVolver);
 
         btnMapa.setOnClickListener(v -> {
 
@@ -69,10 +70,8 @@ public class ContactoActivity extends AppCompatActivity {
             startActivity(intent);
 
         });
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        btnVolver.setOnClickListener(v -> {
+            finish();
         });
     }
 }

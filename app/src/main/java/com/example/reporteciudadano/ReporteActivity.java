@@ -37,10 +37,9 @@ public class ReporteActivity extends AppCompatActivity {
 
     EditText etNombre, etDireccion, etCelular, etCorreo, etDescripcion;
     Button btnEnviar;
-
     Button btnImagen;
+    Button btnVolver;
     ImageView imgReporte;
-
     private static final int PICK_IMAGE = 1;
 
     Uri imageUri;
@@ -66,6 +65,7 @@ public class ReporteActivity extends AppCompatActivity {
         etDescripcion = findViewById(R.id.etDescripcion);
 
         btnEnviar = findViewById(R.id.btnEnviar);
+        btnVolver = findViewById(R.id.btnVolver);
 
         // Spinner colonias
         ArrayAdapter<CharSequence> adapterColonias =
@@ -199,6 +199,9 @@ public class ReporteActivity extends AppCompatActivity {
 
             }
 
+        });
+        btnVolver.setOnClickListener(v -> {
+            finish();
         });
     }
 
