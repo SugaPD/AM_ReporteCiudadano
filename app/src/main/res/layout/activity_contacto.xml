@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pantalla Contacto"
-        android:textSize="30sp"/>
+        android:text="Contacto"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btnMapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abrir Mapa"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btnCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar Correo"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btnLlamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Llamar"
+        android:layout_marginBottom="15dp"/>
 
 </LinearLayout>

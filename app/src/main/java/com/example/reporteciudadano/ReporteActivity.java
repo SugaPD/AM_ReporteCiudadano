@@ -13,6 +13,24 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
+
+import com.example.reporteciudadano.api.ApiService;
+import com.example.reporteciudadano.api.RetrofitClient;
+import com.example.reporteciudadano.models.ReporteRequest;
+import com.example.reporteciudadano.models.ReporteResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
+import android.util.Base64;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
 public class ReporteActivity extends AppCompatActivity {
 
     Spinner spColonias, spTipoReporte;
@@ -26,6 +44,8 @@ public class ReporteActivity extends AppCompatActivity {
     private static final int PICK_IMAGE = 1;
 
     Uri imageUri;
+
+    String imagenBase64 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,11 +136,66 @@ public class ReporteActivity extends AppCompatActivity {
             }
             else {
 
-                Toast.makeText(
-                        this,
-                        "Reporte listo para enviar",
-                        Toast.LENGTH_SHORT
-                ).show();
+                String colonia = spColonias.getSelectedItem().toString();
+                String tipo = spTipoReporte.getSelectedItem().toString();
+
+                ReporteRequest reporteRequest =
+                        new ReporteRequest(
+                                nombre,
+                                direccion,
+                                colonia,
+                                celular,
+                                correo,
+                                tipo,
+                                descripcion,
+                                imagenBase64
+                        );
+
+                ApiService apiService =
+                        RetrofitClient
+                                .getClient()
+                                .create(ApiService.class);
+
+                Call<ReporteResponse> call =
+                        apiService.enviarReporte(reporteRequest);
+
+                call.enqueue(new Callback<ReporteResponse>() {
+
+                    @Override
+                    public void onResponse(Call<ReporteResponse> call,
+                                           Response<ReporteResponse> response) {
+
+                        if(response.isSuccessful() && response.body() != null) {
+
+                            Toast.makeText(
+                                    ReporteActivity.this,
+                                    response.body().getMensaje(),
+                                    Toast.LENGTH_LONG
+                            ).show();
+
+                        } else {
+
+                            Toast.makeText(
+                                    ReporteActivity.this,
+                                    "Error del servidor",
+                                    Toast.LENGTH_LONG
+                            ).show();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ReporteResponse> call, Throwable t) {
+
+                        Toast.makeText(
+                                ReporteActivity.this,
+                                "Error: " + t.getMessage(),
+                                Toast.LENGTH_LONG
+                        ).show();
+
+                        Log.e("API_ERROR", t.getMessage());
+                    }
+                });
 
             }
 
@@ -139,6 +214,36 @@ public class ReporteActivity extends AppCompatActivity {
             imageUri = data.getData();
 
             imgReporte.setImageURI(imageUri);
+
+            try {
+
+                Bitmap bitmap =
+                        MediaStore.Images.Media.getBitmap(
+                                getContentResolver(),
+                                imageUri
+                        );
+
+                ByteArrayOutputStream baos =
+                        new ByteArrayOutputStream();
+
+                bitmap.compress(
+                        Bitmap.CompressFormat.JPEG,
+                        70,
+                        baos
+                );
+
+                byte[] imageBytes = baos.toByteArray();
+
+                imagenBase64 = Base64.encodeToString(
+                        imageBytes,
+                        Base64.DEFAULT
+                );
+
+            } catch (IOException e) {
+
+                e.printStackTrace();
+
+            }
         }
     }
 }
