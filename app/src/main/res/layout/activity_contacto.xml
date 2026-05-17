@@ -3,41 +3,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="24dp"
+    android:background="#F5F5F5">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contacto"
-        android:textSize="28sp"
+        android:textColor="#8A1538"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H. Ayuntamiento de Guaymas"
+        android:textColor="#616161"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp"/>
 
     <Button
         android:id="@+id/btnMapa"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Abrir Mapa"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#8A1538"
         android:layout_marginBottom="15dp"/>
 
     <Button
         android:id="@+id/btnCorreo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Enviar Correo"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#C2185B"
         android:layout_marginBottom="15dp"/>
 
     <Button
         android:id="@+id/btnLlamar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Llamar"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#AD1457"
         android:layout_marginBottom="15dp"/>
 
     <Button
         android:id="@+id/btnVolver"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Volver"/>
+        android:layout_height="60dp"
+        android:text="Volver"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#616161"/>
 
 </LinearLayout>
