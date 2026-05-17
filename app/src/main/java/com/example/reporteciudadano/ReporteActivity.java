@@ -101,9 +101,11 @@ public class ReporteActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(v -> {
 
             String nombre = etNombre.getText().toString();
+            String colonia = spColonias.getSelectedItem().toString();
             String direccion = etDireccion.getText().toString();
             String celular = etCelular.getText().toString();
             String correo = etCorreo.getText().toString();
+            String tipo = spTipoReporte.getSelectedItem().toString();
             String descripcion = etDescripcion.getText().toString();
 
             if(nombre.isEmpty() ||
@@ -149,9 +151,11 @@ public class ReporteActivity extends AppCompatActivity {
                                     int resultCode,
                                     @Nullable Intent data) {
 
-        super.onActivityResult(requestCode,
+        super.onActivityResult(
+                requestCode,
                 resultCode,
-                data);
+                data
+        );
 
         if(requestCode == PICK_IMAGE &&
                 resultCode == RESULT_OK &&
